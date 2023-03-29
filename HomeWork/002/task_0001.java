@@ -16,9 +16,9 @@ public class task_0001 {
                     array[i] = array[i+1];
                     array[i+1] = buf;
                 }
-            }
+            }System.out.println(Arrays.toString(array));
         }
-        System.out.println(Arrays.toString(array));
+        
 
     }
 }
