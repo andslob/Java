@@ -3,6 +3,9 @@ import java.io.FileWriter;
 import java.util.Arrays;
 
 public class task_0001 {
+    /**
+     * @param args
+     */
     public static void main(String[] args) {
         String text = "0001.txt";
         File task = new File(text);
@@ -21,7 +24,8 @@ public class task_0001 {
                         array[i] = array[i+1];
                         array[i+1] = buf;
                     }
-                }System.out.println(Arrays.toString(array));
+                }
+                System.out.println(Arrays.toString(array));
                 FileWriter writer = new FileWriter(text, true);
                     writer.write(Arrays.toString(array));
                     writer.write("\n");
