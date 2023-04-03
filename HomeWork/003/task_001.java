@@ -33,7 +33,7 @@ public class task_001 {
         return result;
     }
     public static void main(String args[]) {
-        int[] sortArr = {12, 6, 4, 1, 15, 10};
+        int[] sortArr = {28, 29, 30, 28, 13, 3, 22, 1};
         int[] result = mergeSort(sortArr);
         System.out.println(Arrays.toString(result));
     }
