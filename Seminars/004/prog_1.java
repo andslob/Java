@@ -4,7 +4,7 @@ import java.util.LinkedList;
 // 1) Замерьте время, за которое в ArrayList добавятся 100000 элементов.
 // 2) Замерьте время, за которое в LinkedList добавятся 100000 элементов. Сравните с предыдущим.
 
-public class prog {
+public class prog_1 {
     public static void main(String[] args) {
         ArrayList<Integer> arrList = new ArrayList<>();
         long startA = System.currentTimeMillis();
