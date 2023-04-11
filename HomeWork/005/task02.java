@@ -48,7 +48,7 @@ public class task02 {
             else
                 namesDict.put((String) Array.get(name.split(" "), 0), 1);
         }
-        //Делаем сортировку с реверсом
+        
         countNamesDict  = namesDict.entrySet()
                                             .stream()
                                             .sorted(reverseOrder(Map.Entry.comparingByValue()))

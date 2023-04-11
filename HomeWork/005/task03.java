@@ -15,7 +15,6 @@ public class task03 {
         printBoard(board);
     }
 
-    // Выводим доску на экран
     public static void printBoard(Map<Integer, Integer> board) {
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
@@ -30,15 +29,12 @@ public class task03 {
         }
     }
 
-    // Метод проверяющий, можно ли поставить ферзя на данную позицию
     public static boolean canPlace(Map<Integer, Integer> board, int row, int col) {
-        // Проверяем вертикали
         for (int i = 0; i < row; i++) {
             if (board.containsKey(i * 8 + col)) {               
                 return false;
             }
         }
-        // Проверяем диагонали
         for (int i = row, j = col; i >= 0 && j >= 0; i--, j--) {
             if (board.containsKey(i * 8 + j)) {
                 return false;
@@ -52,7 +48,6 @@ public class task03 {
         return true;
     }
 
-    // Расставляем ферзей на доске
     public static boolean placeQueens(Map<Integer, Integer> board, int row) {
         if (row == 8) {
             return true;

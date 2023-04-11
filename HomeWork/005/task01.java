@@ -31,8 +31,8 @@ public class task01 {
             System.out.println("Выберите действие:");
             System.out.println("1. Добавить номер");
             System.out.println("2. Вывести весь справочник");
-            int act = sc.nextInt();
-            switch (act) {
+            int pb = sc.nextInt();
+            switch (pb) {
                 case 1:
                     Write(phonebook);
                     break;
@@ -46,7 +46,7 @@ public class task01 {
         }
 
     }
-    //Метод для записи в книгу
+
     public static void Write(Map<String, ArrayList<String>> phonebook) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите фамилию:");
@@ -63,7 +63,7 @@ public class task01 {
             phonebook.put(lastName, temp);
         }
     }
-    //Метод для чтения из книги
+    
     public static void Read(Map<String, ArrayList<String>> phonebook) {
         for (var items : phonebook.entrySet()) {
             System.out.println(items.getKey() + " " + items.getValue());
