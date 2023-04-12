@@ -1,4 +1,4 @@
-package HomeWork.006;
+package HomeWork.sem_6;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,10 +8,10 @@ import java.util.Scanner;
 public class prog {
     public static void main(String[] args) {
 
-        Notebook n1 = new Notebook("MSI", 16, 512, "Window", "black");
-        Notebook n2 = new Notebook("Dell", 8, 256, "Windows", "black");
-        Notebook n3 = new Notebook("Asus", 4, 128, "Linux", "white");
-        Notebook n4 = new Notebook("Lenovo", 8, 512, "Windows", "black");
+        Notebook n1 = new Notebook("MSI", 16, 512, "Windows", "black");
+        Notebook n2 = new Notebook("Dell", 32, 256, "Windows", "grey");
+        Notebook n3 = new Notebook("MSI", 4, 256, "Windows", "black");
+        Notebook n4 = new Notebook("Asus", 8, 512, "Linux", "white");
         Notebook n5 = new Notebook("Apple", 32, 1024, "MacOs", "silver");
         ArrayList<Notebook> list = new ArrayList<>(Arrays.asList(n1, n2, n3, n4, n5));
 
@@ -25,13 +25,13 @@ public class prog {
         custom.put("hdd", 0);
         custom.put("os", "");
         custom.put("color", "");
-        System.out.println("\nПриступаем к подбору оптимальной модели ноутбука");
+        System.out.println("\nВыбираем модель ноутбука");
         while (true) {
             System.out.println("\n1. Объем RAM");
             System.out.println("2. Объем HDD");
             System.out.println("3. OS");
             System.out.println("4. Цвет");
-            System.out.println("0. Завершить подбор и вывести подходящую модель ");
+            System.out.println("0. Завершить выбор и вывести подходящую модель ");
             System.out.println("Введите цифру, соответствующую необходимому критерию: ");
 
             int choice = sc.nextInt();
@@ -74,20 +74,24 @@ public class prog {
 
                 case 4:
                     System.out.println("\nВыберите цвет из списка\n");
-                    System.out.println("1. Серебряный");
+                    System.out.println("1. Серый");
                     System.out.println("2. Белый");
                     System.out.println("3. Черный");
+                    System.out.println("4. Серебристый");
                     System.out.println("Введите цифру, соответствующую необходимому критерию: ");
                     int choiceColor = sc.nextInt();
                     switch (choiceColor) {
                         case 1:
-                            custom.put("color", "silver");
+                            custom.put("color", "grey");
                             break;
                         case 2:
                             custom.put("color", "white");
                             break;
                         case 3:
                             custom.put("color", "black");
+                            break;
+                        case 4:
+                            custom.put("color", "silver");
                             break;
                         default:
                             System.out.println("Ошибка выбора");
@@ -132,3 +136,4 @@ public class prog {
 
     }
 }
+

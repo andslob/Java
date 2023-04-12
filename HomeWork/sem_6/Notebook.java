@@ -1,4 +1,4 @@
-package Java.HomeWork.006;
+package HomeWork.sem_6;
 
 public class Notebook {
     private String brand;
